@@ -23,21 +23,21 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="@string/login"
             android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email" />
+            android:text="@string/email" />
 
         <EditText
             android:id="@+id/id_edit_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Digite o email"
+            android:hint="@string/digite_email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp" />
 
@@ -45,7 +45,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Senha" />
+            android:text="@string/senha" />
 
         <EditText
             android:id="@+id/id_edit_senha"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="Digite a senha"
+            android:hint="@string/digite_senha"
             android:inputType="textPassword"
             android:minHeight="48dp" />
 
@@ -61,7 +61,7 @@
             android:id="@+id/id_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="@string/login"
             tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
 
     </LinearLayout>
