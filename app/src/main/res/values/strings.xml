@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Firebase</string>
+    <string name="senha">Senha</string>
+    <string name="email">Email</string>
+    <string name="digite_email">Digite o email</string>
+    <string name="digite_senha">Digite a senha</string>
+    <string name="login">Login</string>
 </resources>
