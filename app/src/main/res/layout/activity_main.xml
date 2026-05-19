@@ -60,19 +60,19 @@
             android:minHeight="48dp" />
 
         <Button
-            android:id="@+id/id_button"
+            android:id="@+id/id_btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login"
             tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
 
-        <TextView
-            android:id="@+id/id_link"
+        <Button
+            android:id="@+id/id_btn_registrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#111184"
             android:text="@string/registre_se"
-            android:textAlignment="center"
-            android:textColor="#111184" />
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
