@@ -24,13 +24,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login"
+            android:textAlignment="center"
             android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/email" />
+            android:text="@string/email"
+            android:visibility="visible" />
 
         <EditText
             android:id="@+id/id_edit_email"
@@ -63,6 +65,14 @@
             android:layout_height="wrap_content"
             android:text="@string/login"
             tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
+
+        <TextView
+            android:id="@+id/id_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registre_se"
+            android:textAlignment="center"
+            android:textColor="#111184" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
