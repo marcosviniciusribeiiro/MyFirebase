@@ -1,6 +1,10 @@
 package com.example.myfirebase;
 
+import static android.content.ContentValues.TAG;
+
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -16,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,21 +46,41 @@ public class MainActivity extends AppCompatActivity {
         campo_senha = findViewById(R.id.id_edit_senha);
         btn_login = findViewById(R.id.id_button);
 
-        String email = campo_email.getText().toString();
-        String password = campo_senha.getText().toString();
 
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(MainActivity.this, "conectado com o firebase", Toast.LENGTH_LONG).show();
 
-                        } else {
-                            Toast.makeText(MainActivity.this, "falha ao conectar com o firebase", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
+        btn_login.setOnClickListener(view ->
+                registrar()
+        );
+
+
 
     }
+
+    private void validar() {
+        String email = campo_email.getText().toString();
+        String password = campo_senha.getText().toString();
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(MainActivity.this, "sucesso ao conectado", Toast.LENGTH_LONG).show();
+
+                    } else {
+                        Toast.makeText(MainActivity.this, "falha ao conectar", Toast.LENGTH_LONG).show();
+                    }
+                });
+    }
+
+    private void registrar(){
+        String email = campo_email.getText().toString();
+        String password = campo_senha.getText().toString();
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(MainActivity.this,"usuário registrado com sucesso", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(MainActivity.this,"não foi possível -registrar o usuário", Toast.LENGTH_LONG).show();
+                    }
+                });
+    }
+
 }
