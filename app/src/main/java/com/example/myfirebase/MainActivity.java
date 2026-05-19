@@ -1,25 +1,21 @@
 package com.example.myfirebase;
 
 
+import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
     public EditText campo_email;
     public EditText campo_senha;
     public Button btn_login;
+    public Button btn_registrar;
+    public  Button btn_cadastrar;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +42,20 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         campo_email = findViewById(R.id.id_edit_email);
         campo_senha = findViewById(R.id.id_edit_senha);
-        btn_login = findViewById(R.id.id_button);
+        btn_login = findViewById(R.id.id_btn_login);
+        btn_registrar = findViewById(R.id.id_btn_registrar);
 
         btn_login.setOnClickListener(view ->
-                registrar()
+                validar()
         );
+
+        btn_registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              Dialog dialog = new Dialog(MainActivity.this);
+              dialog.setContentView(R.layout.dialog_registro);
+              dialog.show();
+            }});
     }
 
     private void validar() {
@@ -56,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        Toast.makeText(MainActivity.this, "sucesso ao conectado", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "sucesso ao conectar", Toast.LENGTH_LONG).show();
 
                     } else {
                         Toast.makeText(MainActivity.this, "falha ao conectar", Toast.LENGTH_LONG).show();
