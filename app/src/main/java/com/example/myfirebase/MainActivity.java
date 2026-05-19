@@ -1,6 +1,5 @@
 package com.example.myfirebase;
 
-import static android.content.ContentValues.TAG;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -46,14 +45,9 @@ public class MainActivity extends AppCompatActivity {
         campo_senha = findViewById(R.id.id_edit_senha);
         btn_login = findViewById(R.id.id_button);
 
-
-
         btn_login.setOnClickListener(view ->
                 registrar()
         );
-
-
-
     }
 
     private void validar() {
