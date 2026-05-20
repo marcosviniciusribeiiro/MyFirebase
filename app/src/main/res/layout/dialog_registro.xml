@@ -33,6 +33,7 @@
             android:id="@+id/id_novo_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/digite_um_email"
             android:inputType="textEmailAddress" />
@@ -47,6 +48,7 @@
             android:id="@+id/id_nova_senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/digite_uma_senha"
             android:inputType="textPassword" />
@@ -61,6 +63,7 @@
             android:id="@+id/id_confirmar_senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/confirme_sua_senha"
             android:inputType="textPassword" />
