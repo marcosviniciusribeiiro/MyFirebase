@@ -54,13 +54,15 @@ public class MainActivity extends AppCompatActivity {
 
         btn_login.setOnClickListener(view -> validar() );
 
-//        btn_registrar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//              Dialog dialog = new Dialog(MainActivity.this);
-//              dialog.setContentView(R.layout.dialog_registro);
-//              dialog.show();
-//            }});
+        btn_registrar.setOnClickListener(view -> {
+          Dialog dialog = new Dialog(MainActivity.this);
+          dialog.setContentView(R.layout.dialog_registro);
+          dialog.show();
+        });
+
+//        btn_cadastrar.setOnClickListener(v -> cadastrar());
+
+
 //        btn_cadastrar.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -110,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 //                    if (task.isSuccessful()) {
 //                        Toast.makeText(MainActivity.this,"usuário registrado com sucesso", Toast.LENGTH_LONG).show();
 //                    } else {
-//                        Toast.makeText(MainActivity.this,"não foi possível -registrar o usuário", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(MainActivity.this,"não foi possível registrar o usuário", Toast.LENGTH_LONG).show();
 //                    }
 //                });
 //    }
