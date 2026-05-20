@@ -52,17 +52,15 @@ public class MainActivity extends AppCompatActivity {
         btn_registrar = findViewById(R.id.id_btn_registrar);
         btn_cadastrar = findViewById(R.id.id_btn_cadastrar);
 
-        btn_login.setOnClickListener(view ->
-                validar()
-        );
+        btn_login.setOnClickListener(view -> validar() );
 
-        btn_registrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-              Dialog dialog = new Dialog(MainActivity.this);
-              dialog.setContentView(R.layout.dialog_registro);
-              dialog.show();
-            }});
+//        btn_registrar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//              Dialog dialog = new Dialog(MainActivity.this);
+//              dialog.setContentView(R.layout.dialog_registro);
+//              dialog.show();
+//            }});
 //        btn_cadastrar.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -78,6 +76,21 @@ public class MainActivity extends AppCompatActivity {
     private void validar() {
         String email = campo_email.getText().toString();
         String password = campo_senha.getText().toString();
+        if ((!email.contains("@"))){
+            campo_email.setError("Digite um email válido!");
+            return;
+        }
+        if (!(email.length() > 5)){
+            campo_email.setError("Digite seu usuário de email");
+        }
+
+        if(password.isEmpty()){
+            campo_senha.setError("Digite sua senha");
+            return;
+        } else if (!(password.length() >= 6)) {
+            campo_senha.setError("A senha contém no minimo 6 caracteres");
+        }
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
@@ -91,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
 
 //    private void registrar(){
 //        String email = novo_email.getText().toString();
-//
 //        String password = nova_senha.getText().toString();
 //        mAuth.createUserWithEmailAndPassword(email, password)
 //                .addOnCompleteListener(this, task -> {
