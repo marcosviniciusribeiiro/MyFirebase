@@ -7,9 +7,9 @@
     <string name="login">Login</string>
     <string name="registre_se">Registre-se</string>
     <string name="cadastro">Cadastro</string>
+    <string name="digite_um_email">Digite um email...</string>
+    <string name="digite_uma_senha">Digite uma senha</string>
     <string name="confirmar_senha">Confirmar senha</string>
     <string name="confirme_sua_senha">Confirme a sua senha</string>
-    <string name="digite_uma_senha">Digite uma senha</string>
     <string name="cadastrar">Cadastrar</string>
-    <string name="digite_um_email">Digite um email...</string>
 </resources>
