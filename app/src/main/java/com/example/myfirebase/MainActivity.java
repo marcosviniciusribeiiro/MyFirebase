@@ -1,7 +1,5 @@
 package com.example.myfirebase;
 
-
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     public Button btn_registrar;
     public  Button btn_cadastrar;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,13 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         campo_email = findViewById(R.id.id_edit_email);
-        novo_email = findViewById(R.id.id_novo_email);
         campo_senha = findViewById(R.id.id_edit_senha);
-        nova_senha = findViewById(R.id.id_nova_senha);
-        confirmar_senha = findViewById(R.id.id_confirmar_senha);
         btn_login = findViewById(R.id.id_btn_login);
         btn_registrar = findViewById(R.id.id_btn_registrar);
-        btn_cadastrar = findViewById(R.id.id_btn_cadastrar);
 
         btn_login.setOnClickListener(view -> validar() );
 
@@ -59,20 +52,6 @@ public class MainActivity extends AppCompatActivity {
           dialog.setContentView(R.layout.dialog_registro);
           dialog.show();
         });
-
-//        btn_cadastrar.setOnClickListener(v -> cadastrar());
-
-
-//        btn_cadastrar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(nova_senha.equals(confirmar_senha)){
-//                    Toast.makeText(MainActivity.this, "ok", Toast.LENGTH_LONG).show();
-//                }else {
-//                    Toast.makeText(MainActivity.this, "erro", Toast.LENGTH_LONG).show();
-//                }
-//            }
-//        });
     }
 
     private void validar() {
