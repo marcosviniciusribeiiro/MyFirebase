@@ -56,9 +56,13 @@ public class HomeActivity extends AppCompatActivity {
             Toast.makeText(HomeActivity.this, "Preencha a tarefa", Toast.LENGTH_LONG).show();
         }
 
-        Tarefa minhaTarefa = new Tarefa();
-        minhaTarefa.setTitulo(tarefa);
-        myRef.setValue(minhaTarefa);
+        // salvar no firebase
+        String id = myRef.push().getKey();
+        Tarefa minhaTarefa = new Tarefa(id, tarefa);
+        myRef.child(id).setValue(minhaTarefa);
+        campo_tarefa.setText("");
+
+        // atualiza o arrayList
         arrayList.add(minhaTarefa);
     }
 }
