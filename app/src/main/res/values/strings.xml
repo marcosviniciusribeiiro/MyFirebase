@@ -12,4 +12,6 @@
     <string name="confirmar_senha">Confirmar senha</string>
     <string name="confirme_sua_senha">Confirme a sua senha</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="digite_uma_tarefa">Digite uma tarefa</string>
+    <string name="adicionar">Adicionar</string>
 </resources>
