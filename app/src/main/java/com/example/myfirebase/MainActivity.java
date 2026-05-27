@@ -1,9 +1,6 @@
 package com.example.myfirebase;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,9 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-
     private FirebaseAuth mAuth;
-
     public EditText campo_email;
     public EditText campo_senha;
     public Button btn_login;
@@ -43,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         campo_email = findViewById(R.id.id_edit_email);
         campo_senha = findViewById(R.id.id_edit_senha);
-        btn_login = findViewById(R.id.id_btn_login);
 
-        btn_login.setOnClickListener(view -> validar() );
+        btn_login = findViewById(R.id.id_btn_login);
+        btn_login.setOnClickListener(view -> autenticar() );
         btn_registrar = findViewById(R.id.id_btn_registrar);
 
         btn_registrar.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void validar() {
+    private void autenticar() {
         String email = campo_email.getText().toString();
         String password = campo_senha.getText().toString();
         if ((!email.contains("@"))){
