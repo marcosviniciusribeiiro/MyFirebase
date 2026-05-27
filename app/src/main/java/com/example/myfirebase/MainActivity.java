@@ -67,7 +67,28 @@ public class MainActivity extends AppCompatActivity {
                 btn_cadastrar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        registrar(novo_email.getText().toString(), nova_senha.getText().toString());
+                        String email = novo_email.getText().toString();
+                        String senha = nova_senha.getText().toString();
+                        String confirmarSenha = confirmar_senha.getText().toString();
+
+                        if(email.isEmpty()){
+                            novo_email.setError("Digite um email válido");
+                            return;
+                        }
+                        if(senha.isEmpty()){
+                            nova_senha.setError("Digite uma senha\n(mínimo de 6 caracteres)");
+                            return;
+                        }
+                        if(confirmarSenha.isEmpty()){
+                            confirmar_senha.setError("Confirme a sua senha");
+                            return;
+                        }
+
+                        if(senha.equals(confirmarSenha)){
+                            registrar(email, senha);
+                        } else {
+                            Toast.makeText(MainActivity.this, "Senha Incorreta, tente novamente", Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
 
@@ -99,11 +120,11 @@ public class MainActivity extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        Toast.makeText(MainActivity.this, "sucesso ao conectar", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Login efetuado com sucesso", Toast.LENGTH_LONG).show();
                         Intent it = new Intent(MainActivity.this, HomeActivity.class);
                         startActivity(it);
                     } else {
-                        Toast.makeText(MainActivity.this, "falha ao conectar", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Email e/ou senha incorreta", Toast.LENGTH_LONG).show();
                     }
                 });
     }
@@ -112,9 +133,9 @@ public class MainActivity extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        Toast.makeText(MainActivity.this,"usuário registrado com sucesso", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this,"Usuário registrado com sucesso", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(MainActivity.this,"não foi possível registrar o usuário", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this,"Não foi possível registrar o usuário", Toast.LENGTH_LONG).show();
                     }
                 });
     }
