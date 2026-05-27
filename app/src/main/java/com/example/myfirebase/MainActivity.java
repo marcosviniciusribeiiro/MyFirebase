@@ -75,17 +75,22 @@ public class MainActivity extends AppCompatActivity {
                             novo_email.setError("Digite um email válido");
                             return;
                         }
-                        if(senha.isEmpty()){
+                        if(senha.isEmpty() | senha.length()<6){
                             nova_senha.setError("Digite uma senha\n(mínimo de 6 caracteres)");
                             return;
                         }
-                        if(confirmarSenha.isEmpty()){
-                            confirmar_senha.setError("Confirme a sua senha");
+                        if(confirmarSenha.isEmpty() | confirmarSenha.length()<6){
+                            confirmar_senha.setError("Confirme a sua senha\n(mínimo de 6 caracteres)");
                             return;
                         }
 
                         if(senha.equals(confirmarSenha)){
-                            registrar(email, senha);
+                            //registra o usuário
+                            registrar(email, senha, dialog);
+
+                            //preenche os campos de login
+                            campo_email.setText(email);
+                            campo_senha.setText(senha);
                         } else {
                             Toast.makeText(MainActivity.this, "Senha Incorreta, tente novamente", Toast.LENGTH_LONG).show();
                         }
@@ -115,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         } else if (!(password.length() >= 6)) {
             campo_senha.setError("A senha contém no minimo 6 caracteres");
+            return;
         }
 
         mAuth.signInWithEmailAndPassword(email, password)
@@ -129,11 +135,13 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    private void registrar(String email, String password){
+    private void registrar(String email, String password, AlertDialog dialog){
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         Toast.makeText(MainActivity.this,"Usuário registrado com sucesso", Toast.LENGTH_LONG).show();
+                        // fecha a dialog
+                        dialog.dismiss();
                     } else {
                         Toast.makeText(MainActivity.this,"Não foi possível registrar o usuário", Toast.LENGTH_LONG).show();
                     }
