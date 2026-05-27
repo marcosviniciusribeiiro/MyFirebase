@@ -1,8 +1,12 @@
 package com.example.myfirebase;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,12 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     public EditText campo_email;
     public EditText campo_senha;
-    public EditText novo_email;
-    public EditText nova_senha;
-    public  EditText confirmar_senha;
     public Button btn_login;
     public Button btn_registrar;
-    public  Button btn_cadastrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +44,38 @@ public class MainActivity extends AppCompatActivity {
         campo_email = findViewById(R.id.id_edit_email);
         campo_senha = findViewById(R.id.id_edit_senha);
         btn_login = findViewById(R.id.id_btn_login);
-        btn_registrar = findViewById(R.id.id_btn_registrar);
 
         btn_login.setOnClickListener(view -> validar() );
+        btn_registrar = findViewById(R.id.id_btn_registrar);
 
-        btn_registrar.setOnClickListener(view -> {
-          Dialog dialog = new Dialog(MainActivity.this);
-          dialog.setContentView(R.layout.dialog_registro);
-          dialog.show();
-        });
+        btn_registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutInflater inflater = getLayoutInflater();
+                View dialogView = inflater.inflate(R.layout.dialog_registro, null);
+
+                EditText novo_email = dialogView.findViewById(R.id.id_novo_email);
+                EditText nova_senha = dialogView.findViewById(R.id.id_nova_senha);
+                EditText confirmar_senha = dialogView.findViewById(R.id.id_confirmar_senha);
+                Button btn_cadastrar = dialogView.findViewById(R.id.id_btn_cadastrar);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setView(dialogView);
+
+                AlertDialog dialog = builder.create();
+
+                btn_cadastrar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        registrar(novo_email.getText().toString(), nova_senha.getText().toString());
+                    }
+                });
+
+                dialog.show();
+
+            }});
+
+
     }
 
     private void validar() {
@@ -85,9 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    private void registrar(){
-        String email = novo_email.getText().toString();
-        String password = nova_senha.getText().toString();
+    private void registrar(String email, String password){
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
