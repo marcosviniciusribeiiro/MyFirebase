@@ -1,6 +1,7 @@
 package com.example.myfirebase;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -76,24 +77,25 @@ public class MainActivity extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         Toast.makeText(MainActivity.this, "sucesso ao conectar", Toast.LENGTH_LONG).show();
-
+                        Intent it = new Intent(MainActivity.this, HomeActivity.class);
+                        startActivity(it);
                     } else {
                         Toast.makeText(MainActivity.this, "falha ao conectar", Toast.LENGTH_LONG).show();
                     }
                 });
     }
 
-//    private void registrar(){
-//        String email = novo_email.getText().toString();
-//        String password = nova_senha.getText().toString();
-//        mAuth.createUserWithEmailAndPassword(email, password)
-//                .addOnCompleteListener(this, task -> {
-//                    if (task.isSuccessful()) {
-//                        Toast.makeText(MainActivity.this,"usuário registrado com sucesso", Toast.LENGTH_LONG).show();
-//                    } else {
-//                        Toast.makeText(MainActivity.this,"não foi possível registrar o usuário", Toast.LENGTH_LONG).show();
-//                    }
-//                });
-//    }
+    private void registrar(){
+        String email = novo_email.getText().toString();
+        String password = nova_senha.getText().toString();
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(MainActivity.this,"usuário registrado com sucesso", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(MainActivity.this,"não foi possível registrar o usuário", Toast.LENGTH_LONG).show();
+                    }
+                });
+    }
 
 }
