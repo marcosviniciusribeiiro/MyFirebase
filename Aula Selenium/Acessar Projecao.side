@@ -1468,6 +1468,20 @@
       ],
       "value": ""
     }, {
+      "id": "1cd30c0f-542a-4b0d-a8e2-f9e3f412691d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "78ca4769-347c-4a00-bcad-085bd7266a3d",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "0ba6f512-4e26-43af-a311-12adee792859",
       "comment": "",
       "command": "assertText",
@@ -1650,6 +1664,20 @@
       ],
       "value": ""
     }, {
+      "id": "80f4f1df-8b27-4a66-a6d7-c3a599d220f2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "5e51091b-5e72-47e7-a236-3af78d68dac3",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "01308723-9f4c-40b3-8dac-420cda7899b7",
       "comment": "",
       "command": "assertText",
@@ -1715,6 +1743,20 @@
         ["xpath=//li[20]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Tecnologia em Análise e Desenvolvimento de Sistemas')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "1601cda6-9e9f-488c-854e-62aae902f1c0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "13107a35-01a3-448b-8251-2a63f983f826",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
       "value": ""
     }, {
       "id": "792494d7-90d0-4a7a-8986-63c15c9e55be",
@@ -1784,6 +1826,20 @@
       ],
       "value": ""
     }, {
+      "id": "10db52a1-538d-405b-b1f4-1a29eeeccbe7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "a236c614-8575-491e-b337-afd05b9ef40f",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "e7354064-bd95-4b36-8cc8-9a8571442299",
       "comment": "",
       "command": "assertText",
@@ -1849,6 +1905,20 @@
         ["xpath=//li[19]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Sistemas de Informação (Presencial)')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "46fef3e9-5411-490f-8cde-0e9f0e9ce017",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "44431d65-8da3-41ec-a76f-b280811d1438",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
       "value": ""
     }, {
       "id": "366c02eb-1202-4ffb-ac38-820c248cf036",
@@ -1929,6 +1999,20 @@
       ],
       "value": ""
     }, {
+      "id": "c08c66a8-4bc0-4cd8-bbbe-315d2ec69c30",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "bc96b2d0-8a60-490b-a2ef-2af808986ab6",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "fe794e85-5668-4efb-9564-2ecad7703863",
       "comment": "",
       "command": "assertText",
@@ -1996,6 +2080,20 @@
       ],
       "value": ""
     }, {
+      "id": "b144eed4-958e-469a-8300-deed2de3b0fc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "171fd387-1e45-419f-a231-2a2c61b8696e",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "45547d44-9f94-4403-a989-b04bb019f5ab",
       "comment": "",
       "command": "assertText",
@@ -2061,6 +2159,20 @@
         ["xpath=//li[2]/ul/li[10]/a", "xpath:position"],
         ["xpath=//a[contains(.,'MBA Em Gestão da Qualidade de Software')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "4e21496d-eb4b-4d45-a6f3-e7d33df15dea",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "d7614184-46d6-4c51-b539-621fc87de2e2",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
       "value": ""
     }, {
       "id": "82e82220-fd74-48bc-80ce-736799e98b2c",
@@ -2142,6 +2254,20 @@
       ],
       "value": ""
     }, {
+      "id": "5891d542-b80d-4f64-bd11-01474a644c72",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "ac6c81f3-1c42-41cd-a4d4-b229cc2b006d",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "7b8a6170-6414-4f3e-bd8f-70459e6a919c",
       "comment": "",
       "command": "assertText",
@@ -2207,6 +2333,20 @@
         ["xpath=//li[2]/ul/li[10]/a", "xpath:position"],
         ["xpath=//a[contains(.,'MBA Em Gestão da Qualidade de Software')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "957caea4-f8bd-4394-b9e3-f08ebd1ae46e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "778036d2-b7cb-4126-9f26-9924a4cdb7c7",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
       "value": ""
     }, {
       "id": "9fb6e0b4-67eb-4a17-89b1-9f75b6c8a390",
@@ -2288,6 +2428,20 @@
       ],
       "value": ""
     }, {
+      "id": "9420178a-1ffe-404b-ac8e-72fb9a018738",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "f8fadf36-cc31-467f-9b26-9c6214134192",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "44ab228c-b6b5-426f-b58c-9260e3a5c492",
       "comment": "",
       "command": "assertText",
@@ -2353,6 +2507,20 @@
         ["xpath=//li[2]/ul/li[13]/a", "xpath:position"],
         ["xpath=//a[contains(.,'MBA em Gestão Estratégica de Negócios')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "be7a7813-9198-45b8-8c8c-a8b2a5cc2ae3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "6ad3c65f-9267-4486-91f8-5d54bf4e595c",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
       "value": ""
     }, {
       "id": "59b4c10b-02ec-400c-a73e-0852909925dc",
@@ -2434,6 +2602,20 @@
       ],
       "value": ""
     }, {
+      "id": "9a6385cb-ece6-45de-831a-bfdf91c7303a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "8cc3cc91-fb59-44b7-9ffe-8d693ffb8b0e",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "ec194d36-0f7f-4d09-94c6-28ec1071838e",
       "comment": "",
       "command": "assertText",
@@ -2513,6 +2695,20 @@
       ],
       "value": ""
     }, {
+      "id": "f820029d-15ce-4340-a5ca-f8b2f4479f83",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "f9bb5270-cc1c-4877-b791-438b2f7fe275",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "926de17c-dc12-4272-ba1c-6e3d450feaca",
       "comment": "",
       "command": "assertText",
@@ -2578,6 +2774,20 @@
         ["xpath=//li[2]/ul/li[14]/a", "xpath:position"],
         ["xpath=//a[contains(.,'MBA Em Gestão Pública')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "41270c65-e11a-4adc-97a5-c2dd2e508b42",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "8f355021-d716-4ec4-a133-8dad36aca423",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
       "value": ""
     }, {
       "id": "92c09b23-b0a8-4999-a64c-5db7d5a1625b",
@@ -2659,6 +2869,20 @@
       ],
       "value": ""
     }, {
+      "id": "d944d2f2-4444-4579-978e-976b413f7184",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "b0fdcca3-e6c5-4654-9153-8e3e6c736d20",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "a29cab24-7f06-4659-bff6-3696c925ce4b",
       "comment": "",
       "command": "assertText",
@@ -2726,6 +2950,20 @@
       ],
       "value": ""
     }, {
+      "id": "de5b1dba-6838-46f4-a581-ed2dbe31a851",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "4fb74d43-6807-4e44-923a-3cc751640197",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "d63a326b-8968-4d16-a879-f5ef224e8abf",
       "comment": "",
       "command": "assertText",
@@ -2790,6 +3028,20 @@
       ],
       "value": ""
     }, {
+      "id": "04258b95-e602-4797-b8a3-d9e41bbf6f7e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "f9e08988-14ea-491c-9c48-60622e0140e7",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "04b75397-3bbd-4ac4-92a5-9163dfde5f4a",
       "comment": "",
       "command": "assertText",
@@ -2847,6 +3099,20 @@
         ["xpath=//div[3]/address/a/strong", "xpath:position"],
         ["xpath=//strong[contains(.,'UniPROJEÇÃO - Campus Taguatinga')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "5df63f1e-8a45-4834-97fe-7044bcefa404",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "75824f87-a9a2-479d-859c-fd7e48c00fcc",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
       "value": ""
     }, {
       "id": "93ae0388-5925-49e0-8ded-a5e5c4beaae1",
@@ -2925,6 +3191,20 @@
       ],
       "value": ""
     }, {
+      "id": "579cd2ac-1af1-40e2-9e42-df1c82507aac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "17789ab9-c587-4a48-bf5a-2e563cac9fd8",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "fbbce935-6712-4435-972e-7f6c35d1dbb4",
       "comment": "",
       "command": "assertText",
@@ -2994,6 +3274,20 @@
         ["xpath=//div[3]/address/a/strong", "xpath:position"],
         ["xpath=//strong[contains(.,'UniPROJEÇÃO - Campus Taguatinga')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "bebd7e5f-33e7-4140-93f1-e0cedda0da1c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "urlAtual"
+    }, {
+      "id": "ec4c2464-cfe4-44ca-805f-a679dd874aaa",
+      "comment": "",
+      "command": "echo",
+      "target": "${urlAtual}",
+      "targets": [],
       "value": ""
     }, {
       "id": "cb604b58-11a0-43ea-b068-bf0f55849bef",
